@@ -1,0 +1,14 @@
+# zależności - odtwarzalne z package.json
+node_modules/
+
+# zmienne środowiskowe - NIGDY, bywają tam hasła do bazy
+.env
+
+# katalogi budowania
+dist/
+build/
+
+# system i edytor
+.DS_Store
+Thumbs.db
+.vscode/
