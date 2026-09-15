@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Wizytowka PD</title>
+</head>
+<body>
+    <header>
+        <img src="https://img.magnific.com/darmowe-wektory/niebieski-gradient-uzytkownika_78370-4692.jpg?semt=ais_hybrid&w=740&q=80" alt="Awatar">
+        <div id="dane">
+            <h1>Piotr Dziemieńczuk</h1>
+            <h3>Klasa 5p1T</h3>
+        </div>
+    </header>
+    <main>
+        <section id="umiejetnosci">
+        <h2>Umiejętności: </h2>
+        <hr>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>PHP</li>
+                <li>JAVASCRIPT</li>
+            </ul>
+        </section>
+        <section id="kontakt">
+        <h2>Kontakt: </h2>
+        <hr>
+        <form>
+            <label for="imie">Imie: </label>
+            <input type="text" name="imie" id="imie" required>
+
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="temat">Temat: </label>
+            <select name="temat" id="temat">
+                <option value="1">Opcja 1</option>
+                <option value="2">Opcja 2</option>
+                <option value="3">Opcja 3</option>
+            </select>
+            <label for="wiadomosc">Wiadomość: </label>
+            <textarea name="wiadomosc" id="wiadomosc" cols="30" rows="10"></textarea>
+            <button type="submit">Wyślij</button>
+        </form>       
+        </section>
+    </main>
+</body>
+</html>
