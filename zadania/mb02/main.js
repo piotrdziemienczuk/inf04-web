@@ -1,11 +1,7 @@
-// Zadanie 1 — obsługa formularza kontaktowego
-// Walidację robimy sami, dlatego formularz ma atrybut novalidate.
-
 const formularz = document.querySelector("#formularz");
 const podziekowanie = document.querySelector("#podziekowanie");
 const podziekowanieTresc = document.querySelector("#podziekowanie_tresc");
 
-// Opis pól: id pola, komunikat gdy puste i opcjonalna reguła dodatkowa.
 const POLA = [
   {
     id: "imie",
@@ -33,8 +29,6 @@ const POLA = [
   },
 ];
 
-// Wypisuje komunikat pod polem i zaznacza pole na czerwono.
-// Pusty komunikat = wyczyszczenie błędu.
 function pokazBlad(id, komunikat) {
   const pole = document.querySelector(`#${id}`);
   const miejsceNaBlad = document.querySelector(`#blad_${id}`);
@@ -43,7 +37,6 @@ function pokazBlad(id, komunikat) {
   pole.closest(".pole").classList.toggle("pole--blad", komunikat !== "");
 }
 
-// Sprawdza jedno pole. Zwraca true, gdy jest poprawne.
 function sprawdzPole(opis) {
   const wartosc = document.querySelector(`#${opis.id}`).value.trim();
 
@@ -58,7 +51,6 @@ function sprawdzPole(opis) {
   return komunikat === "";
 }
 
-// Walidacja w locie: gdy użytkownik poprawia pole, błąd znika od razu.
 POLA.forEach(opis => {
   const pole = document.querySelector(`#${opis.id}`);
   pole.addEventListener("input", () => {
@@ -69,16 +61,12 @@ POLA.forEach(opis => {
 });
 
 formularz.addEventListener("submit", event => {
-  // Bez tego przeglądarka przeładuje stronę i wszystko zniknie.
   event.preventDefault();
 
-  // map, a nie find — chcemy sprawdzić WSZYSTKIE pola,
-  // żeby użytkownik zobaczył od razu komplet błędów.
   const wyniki = POLA.map(sprawdzPole);
   const wszystkoPoprawne = wyniki.every(ok => ok);
 
   if (!wszystkoPoprawne) {
-    // Ustawiamy kursor w pierwszym błędnym polu.
     const pierwszyBlad = POLA[wyniki.indexOf(false)];
     document.querySelector(`#${pierwszyBlad.id}`).focus();
     return;
@@ -92,7 +80,6 @@ formularz.addEventListener("submit", event => {
     `${imie}, Twoja wiadomość w sprawie „${wybranyTemat}" została wysłana. ` +
     `Odpowiem najszybciej, jak to możliwe.`;
 
-  // Formularz znika, na jego miejscu pojawia się podziękowanie.
   formularz.hidden = true;
   podziekowanie.hidden = false;
 });
