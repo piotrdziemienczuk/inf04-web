@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +15,16 @@
         </div>
     </header>
     <main>
+        <section id="o_mnie">
+            <h2>O mnie: </h2>
+            <hr>
+            <ul>
+                <li>
+                    Uwielbiam grać na instrumentach muzycznych i próbować pisać działający kod
+                </li>
+            </ul>
+          </section>
+
         <section id="umiejetnosci">
         <h2>Umiejętności: </h2>
         <hr>
@@ -28,24 +38,53 @@
         <section id="kontakt">
         <h2>Kontakt: </h2>
         <hr>
-        <form>
-            <label for="imie">Imie: </label>
-            <input type="text" name="imie" id="imie" required>
+        <form id="formularz" novalidate>
+            <div class="pole">
+                <label for="imie">Imie: </label>
+                <input type="text" name="imie" id="imie">
+                <p class="blad" id="blad_imie"></p>
+            </div>
 
-            <label for="email">E-mail: </label>
-            <input type="email" name="email" id="email" required>
+            <div class="pole">
+                <label for="email">E-mail: </label>
+                <input type="email" name="email" id="email">
+                <p class="blad" id="blad_email"></p>
+            </div>
 
-            <label for="temat">Temat: </label>
-            <select name="temat" id="temat">
-                <option value="1">Opcja 1</option>
-                <option value="2">Opcja 2</option>
-                <option value="3">Opcja 3</option>
-            </select>
-            <label for="wiadomosc">Wiadomość: </label>
-            <textarea name="wiadomosc" id="wiadomosc" cols="30" rows="10"></textarea>
+            <div class="pole">
+                <label for="temat">Temat: </label>
+                <select name="temat" id="temat">
+                    <option value="">— wybierz temat —</option>
+                    <option value="1">Opcja 1</option>
+                    <option value="2">Opcja 2</option>
+                    <option value="3">Opcja 3</option>
+                </select>
+                <p class="blad" id="blad_temat"></p>
+            </div>
+
+            <div class="pole">
+                <label for="wiadomosc">Wiadomość: </label>
+                <textarea name="wiadomosc" id="wiadomosc" rows="5"></textarea>
+                <p class="blad" id="blad_wiadomosc"></p>
+            </div>
             <button type="submit">Wyślij</button>
-        </form>       
+        </form>   
+
+        <div id="podziekowanie" class="podziekowanie" hidden>
+            <h3>Dziękuję za wiadomość!</h3>
+            <p id="podziekowanie_tresc"></p>
+          </div>  
+
         </section>
     </main>
+    <footer>
+        <p>
+          Piotr Dziemieńczuk ·
+          <a href="https://github.com/jan-kowalski">GitHub</a> ·
+          <a href="mailto:jan.kowalski@example.com">jan.kowalski@example.com</a>
+        </p>
+      </footer>
+    
+      <script src="main.js"></script>
 </body>
 </html>

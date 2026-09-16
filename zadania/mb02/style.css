@@ -1,3 +1,11 @@
+/* ---------------------------------------------------------------
+   Kolor przewodni: #ff4b00
+     0xff = 15·16 + 15 =  255
+     0x4b = 4·16 + 11 =  63
+     0x00 = 0·16 + 0 = 0
+   -> rgb(255, 75, 0)
+   --------------------------------------------------------------- */
+
 *{
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
@@ -5,6 +13,7 @@
 body{
     background: gainsboro;
 }
+
 header{
     display: flex;
     justify-content: center;
@@ -25,24 +34,25 @@ img{
 }
 h1, h3{
     font-weight: bold;
-    color: #ff4b00; /*rgb(255, 75, 0) */
+    color: #ff4b00; 
     margin:0;
 }
 h3{
-    color: #ff4d00c4; /*rgba(255, 77, 0, 0.769)*/
+    color: #ff4d00c4;
 }
-main, form{
+main{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-#umiejetnosci, #kontakt{
+#umiejetnosci, #kontakt, #o_mnie{
     display: flex;
     justify-content: center;
     flex-direction: column;
     color:rgb(92, 92, 92);
-    width:50%;
+    min-width: 400px;
+    max-width: 400px;
     padding:20px;
     border:5px solid white;
     border-radius: 25px;
@@ -58,3 +68,86 @@ hr{
     background: #ff4b00;
     border: none;
 }
+ 
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    border-radius: 6px;
+    border: 1px solid gainsboro;
+    background: white;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    outline: 2px solid #ff4b00;
+    outline-offset: 0px;
+    border-color: #ff4b00;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .pole--blad input,
+  .pole--blad select,
+  .pole--blad textarea {
+    border-color: red !important;
+  }
+  
+  .blad {
+    margin: 0.3rem 0 0;
+    min-height: 1.2rem;
+    font-size: 0.875rem;
+    color: red;
+  }
+  
+  button {
+    padding: 0.6rem 1.4rem;
+    font-weight: bold;
+    color: gainsboro;
+    background: #ff4b00;
+    border: 3px solid gainsboro;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  
+  button:hover {
+    background: #d44000;
+  }
+  
+  .podziekowanie {
+    padding: 1rem 1.25rem;
+    background: #EFEBFC;
+    border-left: 4px solid #ff4b00;
+    border-radius: 6px;
+  }
+  
+  .podziekowanie h3 {
+    margin-top: 0;
+    color: #ff4b00;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+    font-size: 0.9rem;
+    color: #5A5A66;
+  }
+  
+  a {
+    color: #ff4b00;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #ff4b00;
+  }
+  
