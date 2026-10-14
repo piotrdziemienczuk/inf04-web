@@ -20,18 +20,23 @@ function ZdjecieDnia() {
                     odpowiedz.status)
                 const dane = await odpowiedz.json()
                 setZdjecie(dane)
+                setError(null)
             } catch (err) {
                 setError(err.message)
+                setZdjecie(null)
             } finally {
                 setIsLoading(false)
             }
         }
+
         pobierz()
     }, [id])
 
     return (
         <div className="container mt-5 mb-5">
             <h2>Zdjęcie dnia</h2>
+
+            {error && <div className="alert alert-danger">Bład: {error}</div>}
 
             {zdjecie && (
                 <>
@@ -44,14 +49,16 @@ function ZdjecieDnia() {
                 </>
             )}
 
+
             <button
                 className="btn btn-outline-primary"
                 disabled={isLoading}
                 onClick={() => setId(losowaId())}
             >
-                {isLoading ? 'Losuję ... ' : 'Losuj nowe zdjęcie'}
+                {isLoading ? 'Losuję..' : 'Losuj nowe zdjęcie'}
             </button>
         </div>
+
 
 
 
