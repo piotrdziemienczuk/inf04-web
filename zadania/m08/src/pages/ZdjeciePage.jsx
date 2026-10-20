@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { useZdjecia } from '../hooks/useZdjecia. js'
+import { useZdjecia } from '../hooks/useZdjecia.js'
 
 function ZdjeciePage() {
     const { id } = useParams()

@@ -1,5 +1,5 @@
 import { Outlet, Link, NavLink } from 'react-router-dom'
-import Footer from './Footer. jsx'
+import Footer from './Footer.jsx'
 
 function Layout() {
     return (

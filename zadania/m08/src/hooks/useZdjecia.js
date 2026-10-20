@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { pobierzZdjecia } from ' .. /services/zdjecia. js'
+import { pobierzZdjecia } from '../services/zdjecia.js'
 
 export function useZdjecia() {
     const [zdjecia, setZdjecia] = useState([])

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useZdjecia } from '../hooks/useZdjecia. js'
-import { dodajZdjecie } from '../services/zdjecia. js'
+import { useZdjecia } from '../hooks/useZdjecia.js'
+import { dodajZdjecie } from '../services/zdjecia.js'
 
 const PUSTY_FORMULARZ = { title: '', category: '', image: '', description: ''}
 

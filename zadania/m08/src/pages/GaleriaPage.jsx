@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useZdjecia } from '../hooks/useZdjecia.js'
 import { usunZdjecie, przelaczUlubione } from '../services/zdjecia.js'
-import CategoryBar from '../components/CategoryBar. jsx'
-import Gallery from '../components/Gallery. jsx'
-import ZdjecieDnia from '../components/ZdjecieDnia. jsx'
+import CategoryBar from '../components/CategoryBar.jsx'
+import Gallery from '../components/Gallery.jsx'
+import ZdjecieDnia from '../components/ZdjecieDnia.jsx'
 
 function GaleriaPage() {
     const { zdjecia, setZdjecia, isLoading, error } = useZdjecia()
