@@ -28,7 +28,7 @@ function GaleriaPage() {
         const widoczne =
             aktywnaKategoria === 'wszystkie'
                 ? zdjecia
-                : zdjecia. filter(z => z.category === aktywnakategoria)
+                : zdjecia.filter(z => z.category === aktywnaKategoria)
 
         return (
         <>
